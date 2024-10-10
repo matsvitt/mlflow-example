@@ -25,6 +25,7 @@ def eval_metrics(actual, pred):
 
 
 if __name__ == "__main__":
+    mlflow.set_tracking_uri("http://127.0.0.1:5000")
     warnings.filterwarnings("ignore")
     np.random.seed(40)
 
