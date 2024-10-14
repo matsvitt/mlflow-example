@@ -1,0 +1,67 @@
+[tool.poetry]
+name = "mlexample"
+version = "0.1.0"
+description = "Run mlflow"
+authors = ["Matthias Vitt <matthias.vitt@gmail.com>"]
+readme = "README.md"
+packages = [{include = "mlflowexample", from="src"}]
+
+
+
+[tool.poetry.dependencies]
+python=">=3.11,<3.12"
+numpy = "^1.26.4"
+matplotlib = "^3.8.3"
+seaborn = "^0.13.2"
+requests = "^2.31.0"
+pandas-ta = "^0.3.14b0"
+yfinance = "^0.2.37"
+ipykernel = "^6.29.3"
+python-dotenv = "^1.0.1"
+matplotx = "^0.3.10"
+ta-lib = "^0.4.28"
+lookups = "^0.3.0"
+update = "^0.0.1"
+statsmodels = "^0.14.1"
+pandas-datareader = "^0.10.0"
+dask = "2023.11.0"
+plotly = "^5.19.0"
+pyarrow = "^15.0.0"
+tqdm = "^4.66.2"
+imblearn = "^0.0"
+keras = "^3.0.5"
+tensorflow = "^2.16.1"
+pandas = "^2.2.1"
+scikit-learn = "^1.4.1.post1"
+pyfolio = "^0.9.2"
+bt = "^1.0.0"
+pykalman = "^0.9.5"
+torch = "^2.2.1"
+shadow-useragent = "^0.0.17"
+boto3 = "^1.34.68"
+hvac = "^2.1.0"
+pycryptodome = "^3.20.0"
+selenium = "^4.18.1"
+openpyxl = "^3.1.2"
+riskfolio-lib = "^6.0.0"
+aiohttp = "^3.9.3"
+copulas = "^0.10.1"
+pyportfolioopt = "^1.5.5"
+hmmlearn = "^0.3.2"
+quantstats = "^0.0.62"
+flask-restx = "^1.3.0"
+tsfracdiff = "^1.0.4"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = [
+    "tests",
+]
