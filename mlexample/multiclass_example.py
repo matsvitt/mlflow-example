@@ -1,26 +1,20 @@
-import pandas as pd
-import numpy as np
-from os.path import expanduser
+from keras import layers
+from keras import models
+from keras.layers import Dense, Dropout
+from keras.layers import Dropout
+from keras.models import Sequential
 from matplotlib.ticker import MaxNLocator, FuncFormatter
-import matplotlib.pyplot as plt
-import matplotx
-from statsmodels.tsa.stattools import adfuller
-#from featurewiz import featurewiz
+from os.path import expanduser
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import train_test_split, StratifiedKFold
 from sklearn.preprocessing import MinMaxScaler
-from keras import models
-from keras import layers
-from keras.layers import Dropout
-import numpy as np
-from keras.models import Sequential
-from keras.layers import Dense, Dropout
-#from keras.wrappers.scikit_learn import KerasClassifier
-from sklearn.model_selection import cross_val_score
-#from sklearn.model_selection import KFold, StratifiedKFold
-from sklearn.preprocessing import MinMaxScaler
+from statsmodels.tsa.stattools import adfuller
 import matplotlib.pyplot as plt
-from sklearn.ensemble import RandomForestClassifier
+import matplotx
+import numpy as np
 import os
+import pandas as pd
 
 
 HOME=expanduser("~")

@@ -1,25 +1,17 @@
-# The data set used in this example is from http://archive.ics.uci.edu/ml/datasets/Wine+Quality
-# P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis.
-# Modeling wine preferences by data mining from physicochemical properties. In Decision Support Systems, Elsevier, 47(4):547-553, 2009.
-
-import os
-import warnings
-import sys
-
-import pandas as pd
-import numpy as np
+from keras.layers import Dense, Dropout
+from keras.models import Sequential
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 from sklearn.model_selection import train_test_split
-
+from sklearn.preprocessing import MinMaxScaler
 import mlflow
 import mlflow.sklearn
-
-from keras.models import Sequential
-from keras.layers import Dense, Dropout
-from sklearn.preprocessing import MinMaxScaler
+import numpy as np
+import os
+import pandas as pd
+import sys
+import warnings
 
 from mlexample.multiclass_example import read_data, baseline_model, pre_process_data, generate_classes, create_data
-
 
 def eval_metrics(actual, pred):
     rmse = np.sqrt(mean_squared_error(actual, pred))
